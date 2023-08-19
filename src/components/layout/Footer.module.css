@@ -1,0 +1,100 @@
+/* Estilos para o contêiner das colunas */
+.columns_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuir elementos igualmente com espaçamento uniforme */
+    align-items: center; /* Alinhar os elementos verticalmente ao centro */
+    padding: 1rem; /* Adicionar um espaçamento interno */
+  }
+  
+  /* Estilos para o logotipo */
+  .columns_container img {
+    max-width: 100px; /* Ajuste a largura máxima conforme necessário */
+    height: auto; /* Para manter a proporção */
+    margin-right: 4em; /* Adicionar espaço entre o logotipo e as colunas */
+  }
+  
+  /* Estilos para as colunas */
+  .column {
+    flex: 1; /* As colunas ocupam o espaço disponível igualmente */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1em; /* Espaço na vertical entre as colunas */
+  }
+  
+  /* Estilos para os títulos h3 */
+  .column h3 {
+    color: #266218;
+    margin: 0; /* Removendo as margens */
+    margin-bottom: 0.5em; /* Adicionar um pequeno espaço abaixo do h3 */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Estilos para as listas ul */
+  .column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilos para os itens li */
+  .column li {
+    margin: 0.2em 0;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .column li:hover {
+    color: #266218;
+  }
+  
+  /* Estilos para a lista de redes sociais */
+  .social_list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social_list li {
+    margin-right: 1em;
+  }
+  
+  .social_list li:last-child {
+    margin-right: 0;
+  }
+  
+  .social_list li:hover {
+    color: #266218;
+  }
+  
+  .social_list svg {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  /* Ajuste para o último h3 "Redes Sociais" */
+  .column:last-child h3 {
+    margin-top: -35px; /* Subir em 5 pixels */
+  }
+  
+  /* Estilos para o footer */
+  .footer {
+    background-color: #5a9348;
+    color: #fff;
+    padding: 2em;
+    margin-top: 30px; /* Adicionar espaço acima do footer */
+  }
+  
+  /* Estilos para o copy_right */
+  .copy_right {
+    margin-top: 1em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  .copy_right span {
+    color: #266218;
+    font-weight: bold;
+  }
+  

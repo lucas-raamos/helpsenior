@@ -2,7 +2,7 @@
 import React from 'react';
 import Container from './Container'; // Importe o componente Container
 import NavBar from './NavBar';
-
+import Footer from './Footer';
 
 function MainLayout({ children }) {
   return (
@@ -11,7 +11,7 @@ function MainLayout({ children }) {
       <Container customClass="min-height">
         {children}
       </Container>
-      
+      <Footer />
     </>
   );
 }

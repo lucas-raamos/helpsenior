@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import Company from './components/pages/Company';
-import MainLayout from './components/layout/MainLayout';
 import NewPerfil from './components/pages/NewPerfil';
+import MainLayout from './components/layout/MainLayout';
+
 
 function App() {
   return (
