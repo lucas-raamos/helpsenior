@@ -1,10 +1,26 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home';
+import Contact from './components/pages/Contact';
+import Company from './components/pages/Company';
+import MainLayout from './components/layout/MainLayout';
+import NewPerfil from './components/pages/NewPerfil';
 
 function App() {
   return (
-    <div className='App'>
-       <p>HelpSenior</p>
-    </div>
+    <Router>
+      <Routes>
+
+        {/* Renderizar as páginas dentro do MainLayout */}
+        <Route element={<MainLayout><Home /></MainLayout>} path="/home" />
+        <Route element={<MainLayout><Company /></MainLayout>} path="/company" />
+        <Route element={<MainLayout><Contact /></MainLayout>} path="/contact" />
+        <Route element={<MainLayout><NewPerfil /></MainLayout>} path="/newperfil" />
+       
+      </Routes>
+    </Router>
   );
 }
+
 
 export default App;
