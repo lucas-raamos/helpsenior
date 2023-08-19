@@ -1,0 +1,33 @@
+.navbar{
+    display: flex;
+    justify-content:  space-between;
+    background-color:  #5a9348;
+    padding: 1em;
+    
+
+}
+
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    
+    
+}
+
+.item {
+    margin-right: 1em;
+    
+}
+
+.item a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto';
+
+    
+}
+
+.item a:hover {
+    color: #266218;
+}
