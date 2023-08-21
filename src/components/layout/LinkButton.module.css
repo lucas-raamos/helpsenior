@@ -1,0 +1,16 @@
+.btn {
+    background-color: #222;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: 0.5s;
+    font-family: 'Roboto';
+
+  }
+  
+  .btn:hover {
+    /*color: #266218;*/
+    color: #fff;
+    background: #266218;
+    box-shadow: 0 0 5px #266218, 0 0 25px #266218, 0 0 50px #266218, 0 0 200 #266218;
+  }

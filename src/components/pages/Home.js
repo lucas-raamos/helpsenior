@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import home from '../../img/home.png'
+import LinkButton from '../layout/LinkButton'
 
 
 function Home(){
@@ -7,7 +8,7 @@ function Home(){
         <section className={styles.home_container}>
             <h1>Bem-vindo ao <span>HelpSenior</span></h1>
             <p>Comece adicionando um perfil</p>
-            <a href='/'>Criar Perfil</a>
+            <LinkButton to='/newperfil' text='Criar Perfil' />
             <img src={home} alt='HelpSenior' />
         </section>
     )
