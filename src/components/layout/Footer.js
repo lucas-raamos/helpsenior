@@ -49,7 +49,7 @@ function Footer() {
         </div>
       </div>
       <p className={styles.copy_right}>
-        <span>Life'sGreat</span> &copy; {new Date().getFullYear()}
+        <span>HelpSenior</span> &copy; {new Date().getFullYear()}
       </p>
     </footer>
   );
