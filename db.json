@@ -1,0 +1,30 @@
+{
+  "perfis": [
+    {
+      "genero": {
+        "id": "1",
+        "name": "Feminino"
+      },
+      "name": "Lucas Ramos de Oliveira",
+      "date": "2410555",
+      "peso": "556",
+      "helpsenior": 0,
+      "services": [],
+      "id": 1
+    }
+  ],
+  "generos": [
+    {
+      "id": 1,
+      "name": "Feminino"
+    },
+    {
+      "id": 2,
+      "name": "Masculino"
+    },
+    {
+      "id": 3,
+      "name": "Outro"
+    }
+  ]
+}

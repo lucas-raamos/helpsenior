@@ -11,6 +11,7 @@ function Input( { type, text, name, placeholder, handleOnchange, value}) {
                 placeholder={placeholder}
                 onChange={handleOnchange}
                 value={value}
+                
             
              />
         </div>
