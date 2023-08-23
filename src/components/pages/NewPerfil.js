@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PerfilForm from '../Perfil/PerfilForm';
 import styles from './NewPerfil.module.css';
@@ -21,7 +22,7 @@ function NewPerfil() {
       .then((data) => {
         console.log(data);
         //redirect
-        navigate('/perfis', { state: { message: 'Perfil criado com sucesso!' } });
+        navigate('/perfis',  { state: { message: 'Perfil criado com sucesso!' }} );
       })
       .catch((err) => console.log(err));
   }
