@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 
 import Message from "../layout/Message"
 import Container from '../layout/Container'
+import Loading from "../layout/Loading"
 import LinkButton from '../layout/LinkButton'
 import PerfilCard from "../Perfil/PerfilCard"
 
@@ -11,6 +12,7 @@ import styles from './Perfis.module.css'
 
 function Perfis(){
     const [perfis, setPerfis] = useState([])
+    const [removeLoading, setRemoveLoading] = useState(false)
 
     const navigate = useNavigate()
     let message = ''
@@ -19,20 +21,22 @@ function Perfis(){
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/perfis', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-          .then((resp) => resp.json())
-          .then((data) => {
-            console.log(data)
-            setPerfis(data)
-          })
-          .catch((err) => console.error(err))
-          
-      }, [])
+        setTimeout(() => {
+            fetch('http://localhost:5000/perfis', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            })
+            .then((resp) => resp.json())
+            .then((data) => {
+                console.log(data)
+                setPerfis(data)
+                setRemoveLoading(true)
+            })
+            .catch((err) => console.error(err))
+        }, 300)
+        }, [])
 
     return (
         <div className={styles.perfil_container}>
@@ -54,7 +58,10 @@ function Perfis(){
                             
                         />
                     ))}
-
+                    {!removeLoading && <Loading />}
+                    {removeLoading && perfis.length === 0 && (
+                        <p>Não há pacientes cadastrados</p>
+                    )}
             </Container>
         </div>
     )
