@@ -1,5 +1,5 @@
 .newperfil_container{
-    width: 450px;
+    width: 480px;
     margin: 0 auto;
     padding: 3em;
    
@@ -7,13 +7,14 @@
 
 .newperfil_container h1{
     margin-bottom: 0.5em;
-   
+    text-align: center;
     
   
 }
 
 .newperfil_container p{
     color: #7b7b7b;
+    text-align: center;
     
     
 }

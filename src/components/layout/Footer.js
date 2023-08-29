@@ -1,13 +1,13 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import styles from './Footer.module.css';
-import logo from '../../img/logo.png';
+import footer from '../../img/footer.png';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.columns_container}>
-        <img src={logo} alt='Costs' />
+        <img src={footer} alt='HelpSenior' />
 
         <div className={styles.column}>
           <h3>Início</h3>

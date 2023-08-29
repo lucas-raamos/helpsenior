@@ -31,3 +31,10 @@
 .item a:hover {
     color: #266218;
 }
+.logo_nav img{
+    max-width:280px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    
+  }

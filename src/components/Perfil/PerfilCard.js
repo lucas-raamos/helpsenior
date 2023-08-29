@@ -4,6 +4,12 @@ import styles from './PerfilCard.module.css';
 import { BsFillTrashFill, BsFillPersonFill } from 'react-icons/bs';
 
 function PerfilCard({ id, name, date, peso, genero, handleRemove }) {
+
+    const remove = (e) => {
+        e.preventDefault()
+        handleRemove(id)
+    }
+
     return (
         <div className={styles.perfil_card}>
             <h4>{name}</h4>
@@ -21,7 +27,7 @@ function PerfilCard({ id, name, date, peso, genero, handleRemove }) {
                     <BsFillPersonFill /> Ficha
                     
                 </Link>
-                <button>
+                <button onClick={remove}>
                     <BsFillTrashFill /> Excluir
                 </button>
             </div>
