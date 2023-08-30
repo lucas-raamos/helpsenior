@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <Routes>
-
+        
         {/* Renderizar as páginas dentro do MainLayout */}
         <Route element={<MainLayout><Home /></MainLayout>} path="/home" />
         <Route element={<MainLayout><Perfis /></MainLayout>} path="/perfis" />

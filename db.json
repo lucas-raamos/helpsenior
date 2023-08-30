@@ -26,18 +26,6 @@
     },
     {
       "name": "Lucas",
-      "date": "225",
-      "peso": "5562",
-      "genero": {
-        "id": "2",
-        "name": "Masculino"
-      },
-      "helpsenior": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "Lucas",
       "date": "24/10/1998",
       "peso": "50kg",
       "genero": {
@@ -61,9 +49,28 @@
       "id": 6
     },
     {
+      "name": "Jorge",
+      "date": "24/10/1998",
+      "peso": "24kg",
+      "genero": {
+        "id": "2",
+        "name": "Masculino"
+      },
       "helpsenior": 0,
       "services": [],
-      "id": 7
+      "id": 8
+    },
+    {
+      "name": "Luana",
+      "date": "24/10/1998",
+      "peso": "25kg",
+      "genero": {
+        "id": "1",
+        "name": "Feminino"
+      },
+      "helpsenior": 0,
+      "services": [],
+      "id": 9
     }
   ],
   "generos": [

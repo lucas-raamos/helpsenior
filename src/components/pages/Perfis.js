@@ -6,6 +6,7 @@ import Loading from "../layout/Loading"
 import LinkButton from '../layout/LinkButton'
 import PerfilCard from "../Perfil/PerfilCard"
 import styles from './Perfis.module.css'
+import { BsClipboardCheckFill } from 'react-icons/bs';
 
 function Perfis() {
     const [perfis, setPerfis] = useState([])
@@ -54,7 +55,12 @@ function Perfis() {
     return (
         <div className={styles.perfil_container}>
             <div className={styles.title_container}>
-                <h1>Meus Pacientes</h1>
+                <h1 className={styles.title}>
+                    <span className={styles.icon}>
+                        <BsClipboardCheckFill size="1.3em" />
+                    </span>
+                    Pacientes
+                </h1>
                 <LinkButton to='/newperfil' text='Criar Perfil' />
             </div>
             {message && <Message type="success" msg={message} />}
