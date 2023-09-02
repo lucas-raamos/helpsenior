@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+:root {
+    --verde-escuro: #14424b;
+    --verde: #2f9364;
+    --orange: #ff7c37;
+    --degrade-btn: linear-gradient(#fe9611, #ff5c00);
+    --color-p: #868585;
+
+}
+
+.background_verde {
+    background: var(--verde-escuro);
+}
+
+/* classes reutilizaveis */
+
+.container {
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section,
+footer{
+    padding: 2.7rem 0;
+}
+
+.btn_gradiente {
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+
+}
+.logo_nav img{
+    max-width:280px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    
+  }
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.ul li {
+    margin: 0 35px;
+    font-size: 15px;
+}
+
+.ul li a {
+    color: white;
+}
+
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.main_text {
+    width: 50%;
+    color: white;
+}
+
+.main_text h1 {
+    font-size: 4.5rem;
+}
+
+.main_text div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.main_img img {
+    max-width: 600px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+
+}
+
+/*menu icon */
+.menu_icon {
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* resultados */
+.resultados{
+    background: #FA8607;
+
+}
+
+.resultados .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resultados .resultados_text{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 50%;
+}
+
+.resultados .resultados_numero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.resultados .resultados_numero p{
+    text-align: center;;
+    margin: 0 30px;
+    font-size: 20px;
+}
+.resultados .resultados_numero p span{
+    font-size: 30px;
+    font-weight: 600;
+}
+/* section diferenciais */
+.diferenciais .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.diferenciais .card{
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.diferenciais .card:hover{
+    box-shadow: 0px 10px 200px 8px #e6e6fa85;
+
+}
+.diferenciais .card img{
+    width: 60px;
+}
+.diferenciais .card .titulo{
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+/*section casa */
+
+.casa .container{
+    display: flex;
+    align-items: center;
+}
+.casa .casa_img {
+    width: 50%;
+
+}
+.casa .casa_img img{
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+.casa .casa_text{
+    width: 50%;
+    padding-left: 5px;
+}
+.casa .casa-text h2{
+    font-size: 2.5em;
+}
+.casa .casa_text p{
+    margin: 20px 0;
+    color: var(--color-p);
+}
+.casa .casa_text p b{
+    color: black;
+    font-size: 25px;
+}
+.melhores_lugares .azul{
+    font-size: 24px;
+    font-weight: 600;
+    color: #0060fb;
+}
+.melhores_lugares h2{
+    font-size: 2.5rem;
+}
+.melhores_lugares .cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.melhores_lugares .cards .card_item{
+    width: 30%;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 20px;
+}
+
+
+/* Responsivo */
+@media (max-width: 980px) {
+    .menu_icon {
+        display: none;
+    }
+    .ul{
+        position: fixed;
+        background: var(--verde-escuro);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ul li{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .ul.ativo{
+        left: 0;
+    }
+    main .container{
+        flex-direction: column;
+    }
+    main .container .main_img, 
+    main .container .main_text{
+        width: 100%;
+        text-align: center;
+    }
+ 
+    main .container .main_text h1{
+        font-size:  4rem;
+    }
+    main .container .main_text div {
+        justify-content: center;
+    }
+    .resultados .container{
+        flex-direction: column;
+    }
+    .resultados .resultados_text,
+    .resultados .resultados_numero{
+        width: 100%;
+        text-align: center;
+    }
+    .resultados_numero{
+        margin-top: 30px;
+    }
+    .diferenciais .container{
+        flex-direction: column;
+    }
+    .diferenciais .card{
+        width: 100%;
+    }
+    .casa .container{
+        flex-direction: column-reverse;
+    }
+    .casa .casa_text,
+    .casa .casa_img{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+ }
+ @media (max-width: 440px){
+    .resultados .resultados_numero{
+        flex-direction: column;
+    }
+
+    main .container .main_text h1 {
+        font-size: 3rem;
+    }
+ }

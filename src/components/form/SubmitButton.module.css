@@ -1,14 +1,22 @@
 .btn{
-    background-color: #222;
-    color: #fff;
-    padding: 0.7em 1.2em;
-    text-decoration: none;
-    transition: .5s;
-    cursor: pointer;
-    border: none;
-    font-family: 'Roboto';
+  background-color: #222;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: .5s;
+  cursor: pointer;
+  border: 4px groove;
+  border-color: #266218;
+  font-size: 14px;
+  
 
 }
 .btn:hover{
-    color: #266218;
+  color: #266218;
+ 
+}
+.button{
+  text-align: center;
+
 }

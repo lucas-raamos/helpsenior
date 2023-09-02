@@ -84,7 +84,7 @@
     background-color: #5a9348;
     color: #fff;
     padding: 2em;
-    margin-top: 30px; /* Adicionar espaço acima do footer */
+    margin-top: 60px; /* Adicionar espaço acima do footer */
   }
   
   /* Estilos para o copy_right */
@@ -97,4 +97,10 @@
     color: #266218;
     font-weight: bold;
   }
-  
+  img{
+    max-width:200px;
+    max-height:90px;
+    width: auto;
+    height: auto;
+    
+  }

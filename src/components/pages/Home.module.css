@@ -4,14 +4,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4em;
+    padding: 1em;
     
 
 }
 .home_container h1{
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin-bottom: .5em;
-
+    font-family: Bebas Neue;
 
 
 }
@@ -19,6 +19,8 @@
     color: #266218;
     padding: 0 .2em;
     background-color: #222;
+    font-family: Bebas Neue;
+
    
 
 }
@@ -29,7 +31,9 @@
 
 
 }
-.home_container img{
-    width: 350px;
-    margin: 2em 0;
+.home_logo{
+    max-width: 400px;
+    max-height:400px;
+    width: auto;
+    height: auto;
 }
