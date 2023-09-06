@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+:root {
+    --azul-escuro: #33AAB6;
+    --verde: #2f9364;
+    --orange: #ff7c37;
+    --degrade-btn: linear-gradient(#2786AB, #15485C);
+    --color-p: #868585;
+
+}
+
+.background_azul {
+    background: var(--azul-escuro);
+    padding-bottom: 50px;
+   
+}
+
+/* classes reutilizaveis */
+
+.container {
+
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+section,
+footer {
+    padding: 2.7rem 0;
+}
+
+.btn_gradiente {
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    font-family: 'Roboto';
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+    
+}
+.btn_gradiente:hover {
+    /*color: #266218;*/
+    color: #fff;
+    background: #164b60;
+  
+  }
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  
+
+}
+
+.logo_nav img {
+    max-width: 280px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.ul li {
+    margin: 0 35px;
+    font-size: 15px;
+}
+
+.ul li a {
+    color: white;
+}
+
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.main_text {
+    width: 50%;
+    color: white;
+}
+
+.main_text h1 {
+    font-size: 4.5rem;
+}
+
+.main_text div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+.main_img img {
+    max-width: 620px;
+    max-height: 620px;
+    width: auto;
+    height: auto;
+    opacity: 0.8;
+    border-radius: 8px;
+    
+}
+
+/*menu icon */
+.menu_icon {
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* resultados */
+.resultados {
+    background: #164b60;
+
+}
+
+.resultados .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resultados .resultados_text {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 50%;
+}
+
+.resultados .resultados_numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.resultados .resultados_numero p {
+    text-align: center;
+    ;
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.resultados .resultados_numero p span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* section diferenciais */
+.diferenciais .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.diferenciais .card {
+    width: 30%;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.diferenciais .card:hover {
+    box-shadow: 0px 10px 200px 8px #e6e6fa85;
+
+}
+
+.diferenciais .card img {
+    width: 60px;
+}
+
+.diferenciais .card .titulo {
+    margin: 13px 0;
+    font-weight: 600;
+}
+
+/*section casa */
+
+.casa .container {
+    display: flex;
+    align-items: center;
+}
+
+.casa .casa_img {
+    width: 50%;
+
+}
+
+.casa .casa_img img {
+    max-width: 600px;
+    max-height: 800px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.casa .casa_text {
+    width: 50%;
+    padding-left: 5px;
+}
+
+.casa .casa_text h2 {
+    font-size: 2.5em;
+}
+
+.casa .casa_text p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: var(--color-p);
+}
+
+.casa .casa_text p b {
+    color: black;
+    font-size: 25px;
+}
+
+.melhores_lugares .azul {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0060fb;
+}
+
+.melhores_lugares h2 {
+    font-size: 2.5rem;
+}
+
+.melhores_lugares .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.melhores_lugares .cards .card_item {
+    width: 30%;
+    text-align:center;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: 2px 1px 34px -4px rgba(30, 26, 26, 0.54);
+    -webkit-box-shadow: 2px 1px 34px -4px rgba(30, 26, 26, 0.54);
+    -moz-box-shadow: 2px 1px 34px -4px rgba(30, 26, 26, 0.54);
+}
+
+.melhores_lugares .cards img {
+    width: 80px;
+}
+
+
+
+.melhores_lugares .cards .nome_casa {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.melhores_lugares .cards .contato {
+    margin-top: 20px;
+    color: var(--color-p);
+}
+.melhores_lugares .cards .card_item img{
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+}
+.melhores_lugares .cards button {
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--orange);
+    border: none;
+}
+.newsletter{
+    margin-top: 50px;
+    background-color: #164b60;
+
+}
+.newsletter .box_newsletter{
+    text-align: center;
+    padding: 100px;
+    background-image: url('../../img/fogo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+.newsletter .box_newsletter h2{
+    font-size: 2.5rem;
+}
+.newsletter .box_newsletter p{
+    margin: 13px 0;
+}
+.newsletter .box_newsletter input{
+    width: 35%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: #00000098;
+    background-color: #faefda;
+}
+.newsletter .box_newsletter button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 14px;
+    color: white;
+    background-color: #164b60;
+    cursor: pointer;
+}
+/* end section newsletter */
+footer{
+    background-color: var(--azul-escuro);
+}
+footer .container{
+    display: flex;
+    color: white;
+}
+footer .container ul{
+    width: 25%;
+}
+footer .container h3{
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+footer .container .redes_sociais img{
+    margin-right: 10px;
+    cursor: pointer;
+}
+footer .container ul > p{
+    margin-bottom: 40px;
+}
+footer .container li{
+    margin: 10px 0;
+}
+footer .container a{
+    color: white;
+}
+/*end footer */
+/* Responsivo */
+@media (max-width: 980px) {
+    .menu_icon {
+        display: none;
+    }
+
+    .ul {
+        position: fixed;
+        background: var(--azul-escuro);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ul li {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .ul.ativo {
+        left: 0;
+    }
+
+    main .container {
+        flex-direction: column;
+    }
+
+    main .container .main_img,
+    main .container .main_text {
+        width: 100%;
+        text-align: center;
+    }
+
+    main .container .main_text h1 {
+        font-size: 4rem;
+    }
+
+    main .container .main_text div {
+        justify-content: center;
+    }
+
+    .resultados .container {
+        flex-direction: column;
+    }
+
+    .resultados .resultados_text,
+    .resultados .resultados_numero {
+        width: 100%;
+        text-align: center;
+    }
+
+    .resultados_numero {
+        margin-top: 30px;
+    }
+
+    .diferenciais .container {
+        flex-direction: column;
+    }
+
+    .diferenciais .card {
+        width: 100%;
+    }
+
+    .casa .container {
+        flex-direction: column-reverse;
+    }
+
+    .casa .casa_text,
+    .casa .casa_img {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .melhores_lugares .cards {
+        flex-direction: column;
+    }
+
+    .melhores_lugares .cards .card_item {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .newsletter .box_newsletter{
+        padding: 50px;
+    }
+    .newsletter .box_newsletter h2{
+        font-size: 2rem;
+    }
+    .newsletter .box_newsletter input{
+        width: 90%;
+    }
+    
+    .newsletter .box_newsletter button{
+        width: 50%;
+        margin-top: 20px;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container ul{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media (max-width: 440px) {
+    .resultados .resultados_numero {
+        flex-direction: column;
+    }
+
+    main .container .main_text h1 {
+        font-size: 3rem;
+    }
+}

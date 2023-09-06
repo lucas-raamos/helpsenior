@@ -6,13 +6,13 @@ import Company from './components/pages/Company';
 import NewPerfil from './components/pages/NewPerfil';
 import Perfis from './components/pages/Perfis';
 import MainLayout from './components/layout/MainLayout';
-
+import LandingPage from './components/pages/LandingPage';
 
 function App() {
   return (
     <Router>
       <Routes>
-        
+        <Route path="/" element={<LandingPage />}  />
         {/* Renderizar as páginas dentro do MainLayout */}
         <Route element={<MainLayout><Home /></MainLayout>} path="/home" />
         <Route element={<MainLayout><Perfis /></MainLayout>} path="/perfis" />
