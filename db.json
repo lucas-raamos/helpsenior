@@ -25,6 +25,8 @@
       "id": 2
     },
     {
+      "name": "Pedro",
+=======
       "name": "Mary",
       "date": "24/10/1997",
       "peso": "50kg",
@@ -34,32 +36,19 @@
       },
       "helpsenior": 0,
       "services": [],
-      "id": 4
-    },
-    {
-      "name": "Lucas",
-      "date": "24/10/1997",
-      "peso": "50kg",
-      "genero": {
-        "id": "1",
-        "name": "Feminino"
-      },
-      "helpsenior": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "jordana",
-      "date": "01/06/1998",
-      "peso": "55",
-      "genero": {
-        "id": "1",
-        "name": "Feminino"
-      },
-      "helpsenior": 0,
-      "services": [],
       "id": 6
-    }
+    },
+    {
+      "name": "Jorge",
+      "date": "24/10/1998",
+      "peso": "24kg",
+      "genero": {
+        "id": "2",
+        "name": "Masculino"
+      },
+      "helpsenior": 0,
+
+    
   ],
   "generos": [
     {
