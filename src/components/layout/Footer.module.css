@@ -25,7 +25,7 @@
   
   /* Estilos para os títulos h3 */
   .column h3 {
-    color: #266218;
+    color: #1FC0D0;
     margin: 0; /* Removendo as margens */
     margin-bottom: 0.5em; /* Adicionar um pequeno espaço abaixo do h3 */
     font-family: 'Roboto', sans-serif;
@@ -46,7 +46,7 @@
   }
   
   .column li:hover {
-    color: #266218;
+    color: #1FC0D0;
   }
   
   /* Estilos para a lista de redes sociais */
@@ -66,7 +66,7 @@
   }
   
   .social_list li:hover {
-    color: #266218;
+    color: #1FC0D0;
   }
   
   .social_list svg {
@@ -81,7 +81,7 @@
   
   /* Estilos para o footer */
   .footer {
-    background-color: #5a9348;
+    background-color: #164b60;
     color: #fff;
     padding: 2em;
     margin-top: 60px; /* Adicionar espaço acima do footer */
@@ -94,7 +94,7 @@
     font-family: 'Roboto', sans-serif;
   }
   .copy_right span {
-    color: #266218;
+    color: #4FC0D0;
     font-weight: bold;
   }
   img{
