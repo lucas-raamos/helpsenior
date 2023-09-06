@@ -9,7 +9,7 @@ function Home(){
             <h1>Bem-vindo ao <span>HelpSenior</span></h1>
             <p>Comece adicionando um perfil</p>
             <LinkButton to='/newperfil' text='Criar Perfil' />
-            <img src={home} alt='HelpSenior' />
+            <img src={home} alt='HelpSenior'className={styles.home_logo}/>
         </section>
     )
 

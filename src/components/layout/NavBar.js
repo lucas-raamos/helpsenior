@@ -8,9 +8,11 @@ function NavBar(){
     return (
         <nav className={styles.navbar}>
         <Container>
+        <div className={styles.logo_nav}>
         <Link to="/">
             <img src={logo} alt="" />
         </Link>
+        </div>
         <ul className={styles.list}>
             <li className={styles.item}>
                 <Link to="/home">Home</Link>
