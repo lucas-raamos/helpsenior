@@ -13,11 +13,13 @@
     --orange: #ff7c37;
     --degrade-btn: linear-gradient(#2786AB, #15485C);
     --color-p: #868585;
+    --degrade-nav: linear-gradient(#1A5870, #15485C);
 
 }
 
 .background_azul {
     background: var(--azul-escuro);
+    padding-top: 20px;
     padding-bottom: 50px;
    
 }
@@ -49,6 +51,7 @@ footer {
     
 }
 .btn_gradiente:hover {
+    /*color: #266218;*/
     color: #fff;
     background: #164b60;
   
@@ -59,9 +62,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-  
-
+    padding: 0.5em;
+    background-color: #15485C;
+    background-image: var(--degrade-nav);
+   
+    
+    
 }
 
 .logo_nav img {
@@ -69,6 +75,7 @@ nav {
     max-height: 200px;
     width: auto;
     height: auto;
+    margin-left: 67px;
 
 }
 
@@ -81,6 +88,7 @@ nav {
 .ul {
     display: flex;
     align-items: center;
+    
 
 }
 
@@ -97,7 +105,7 @@ main .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .main_text {
