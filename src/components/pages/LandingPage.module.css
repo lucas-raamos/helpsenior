@@ -13,13 +13,11 @@
     --orange: #ff7c37;
     --degrade-btn: linear-gradient(#2786AB, #15485C);
     --color-p: #868585;
-    --degrade-nav: linear-gradient(#1A5870, #15485C);
 
 }
 
 .background_azul {
     background: var(--azul-escuro);
-    padding-top: 20px;
     padding-bottom: 50px;
    
 }
@@ -62,12 +60,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #164b60;;
     padding: 0.5em;
-    background-color: #15485C;
-    background-image: var(--degrade-nav);
-   
-    
-    
+  
+
 }
 
 .logo_nav img {
@@ -88,7 +84,6 @@ nav {
 .ul {
     display: flex;
     align-items: center;
-    
 
 }
 
@@ -105,7 +100,7 @@ main .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
 .main_text {

@@ -21,8 +21,9 @@ import linkedin from '../../img/linkedin.png'
 function LandingPage() {
     return (
         <div>
-            
+            <div className={styles.background_azul}>
                 <header>
+                 
                         <nav>
                             <div className={styles.logo_nav}>
                                 <Link to="/">
@@ -52,7 +53,7 @@ function LandingPage() {
                         </nav>
                     
                 </header>
-                <div className={styles.background_azul}>
+
                 <main>
                     <div className={styles.container}>
                         <div className={styles.main_text}>
@@ -250,7 +251,4 @@ function LandingPage() {
     );
 }
 
-
 export default LandingPage;
-
-
