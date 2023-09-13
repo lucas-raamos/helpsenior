@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import logo from '../../img/logo.png'
 import styles from './LandingPage.module.css';
@@ -249,4 +250,7 @@ function LandingPage() {
     );
 }
 
+
 export default LandingPage;
+
+
