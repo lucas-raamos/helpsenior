@@ -23,7 +23,7 @@ function LandingPage() {
         <div>
             <div className={styles.background_azul}>
                 <header>
-                    <div className={styles.container}>
+                 
                         <nav>
                             <div className={styles.logo_nav}>
                                 <Link to="/">
@@ -51,7 +51,7 @@ function LandingPage() {
                                 <img src={menu} alt='ícone de menu' />
                             </div>
                         </nav>
-                    </div>
+                    
                 </header>
 
                 <main>

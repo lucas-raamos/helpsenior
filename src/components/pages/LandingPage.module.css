@@ -60,7 +60,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    background-color: #164b60;;
+    padding: 0.5em;
   
 
 }
@@ -70,6 +71,7 @@ nav {
     max-height: 200px;
     width: auto;
     height: auto;
+    margin-left: 67px;
 
 }
 
@@ -98,7 +100,7 @@ main .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 .main_text {
