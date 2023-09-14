@@ -19,8 +19,12 @@
 
 .background_azul {
     background: var(--azul-escuro);
+<<<<<<< Updated upstream
     padding-top: 20px;
     padding-bottom: 50px;
+=======
+    padding-bottom: 150px;
+>>>>>>> Stashed changes
    
 }
 
@@ -39,6 +43,7 @@ footer {
 }
 
 .btn_gradiente {
+    font-size: 16px;
     background-color: #222;
     color: #fff;
     text-decoration: none;
@@ -48,12 +53,13 @@ footer {
     border: none;
     cursor: pointer;
     background-image: var(--degrade-btn);
+    border-radius: 5px;
     
 }
 .btn_gradiente:hover {
     /*color: #266218;*/
     color: #fff;
-    background: #164b60;
+    background: #1B6B93;
   
   }
 
@@ -62,6 +68,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< Updated upstream
+=======
+    background-color: #164b60;
+>>>>>>> Stashed changes
     padding: 0.5em;
     background-color: #15485C;
     background-image: var(--degrade-nav);
@@ -94,7 +104,7 @@ nav {
 
 .ul li {
     margin: 0 35px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .ul li a {
@@ -192,6 +202,8 @@ main .container {
     padding: 30px;
     border-radius: 15px;
     transition: 0.3s;
+    
+   
 }
 
 .diferenciais .card:hover {
@@ -201,6 +213,8 @@ main .container {
 
 .diferenciais .card img {
     width: 60px;
+    
+    
 }
 
 .diferenciais .card .titulo {
