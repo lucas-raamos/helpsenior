@@ -19,13 +19,9 @@
 
 .background_azul {
     background: var(--azul-escuro);
-<<<<<<< Updated upstream
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 50px;
-=======
-    padding-bottom: 150px;
->>>>>>> Stashed changes
-   
+
 }
 
 /* classes reutilizaveis */
@@ -60,6 +56,7 @@ footer {
     /*color: #266218;*/
     color: #fff;
     background: #1B6B93;
+    
   
   }
 
@@ -68,10 +65,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< Updated upstream
-=======
     background-color: #164b60;
->>>>>>> Stashed changes
     padding: 0.5em;
     background-color: #15485C;
     background-image: var(--degrade-nav);
@@ -154,7 +148,7 @@ main .container {
 /* resultados */
 .resultados {
     background: #164b60;
-
+    
 }
 
 .resultados .container {
@@ -179,7 +173,6 @@ main .container {
 
 .resultados .resultados_numero p {
     text-align: center;
-    ;
     margin: 0 30px;
     font-size: 20px;
 }
