@@ -13,13 +13,15 @@
     --orange: #ff7c37;
     --degrade-btn: linear-gradient(#2786AB, #15485C);
     --color-p: #868585;
+    --degrade-nav: linear-gradient(#1A5870, #15485C);
 
 }
 
 .background_azul {
     background: var(--azul-escuro);
+    padding-top: 30px;
     padding-bottom: 50px;
-   
+
 }
 
 /* classes reutilizaveis */
@@ -37,6 +39,7 @@ footer {
 }
 
 .btn_gradiente {
+    font-size: 16px;
     background-color: #222;
     color: #fff;
     text-decoration: none;
@@ -46,12 +49,14 @@ footer {
     border: none;
     cursor: pointer;
     background-image: var(--degrade-btn);
+    border-radius: 5px;
     
 }
 .btn_gradiente:hover {
     /*color: #266218;*/
     color: #fff;
-    background: #164b60;
+    background: #1B6B93;
+    
   
   }
 
@@ -60,10 +65,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #164b60;;
+    background-color: #164b60;
     padding: 0.5em;
-  
-
+    background-color: #15485C;
+    background-image: var(--degrade-nav);
+   
+    
+    
 }
 
 .logo_nav img {
@@ -84,12 +92,13 @@ nav {
 .ul {
     display: flex;
     align-items: center;
+    
 
 }
 
 .ul li {
     margin: 0 35px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .ul li a {
@@ -100,7 +109,7 @@ main .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .main_text {
@@ -139,7 +148,7 @@ main .container {
 /* resultados */
 .resultados {
     background: #164b60;
-
+    
 }
 
 .resultados .container {
@@ -164,7 +173,6 @@ main .container {
 
 .resultados .resultados_numero p {
     text-align: center;
-    ;
     margin: 0 30px;
     font-size: 20px;
 }
@@ -187,6 +195,8 @@ main .container {
     padding: 30px;
     border-radius: 15px;
     transition: 0.3s;
+    
+   
 }
 
 .diferenciais .card:hover {
@@ -196,6 +206,8 @@ main .container {
 
 .diferenciais .card img {
     width: 60px;
+    
+    
 }
 
 .diferenciais .card .titulo {

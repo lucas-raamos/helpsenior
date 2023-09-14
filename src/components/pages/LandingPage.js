@@ -32,19 +32,10 @@ function LandingPage() {
                             </div>
                             <ul className={styles.ul}>
                                 <li>
-                                    <Link to="/home">Home</Link>
+                                    <Link to="/login">login</Link>
                                 </li>
                                 <li>
-                                    <Link to="/sobre">Sobre</Link>
-                                </li>
-                                <li>
-                                    <Link to="/tipocasa">Tipo de casa</Link>
-                                </li>
-                                <li>
-                                    <Link to="/contato">Contato</Link>
-                                </li>
-                                <li>
-                                    <Link to="/login"><button className={styles.btn_gradiente}>Login</button></Link>
+                                    <Link to="/register"><button className={styles.btn_gradiente}>Cadastre-se</button></Link>
                                 </li>
                             </ul>
                             <div className={styles.menu_icon}>
@@ -97,23 +88,23 @@ function LandingPage() {
                 <div className={styles.container}>
                     <div className={styles.card}>
                         <img src={medal} alt='Medalha' />
-                        <h3 className={styles.titulo}>Empresa Profissional</h3>
+                        <h3 className={styles.titulo}>Gestão Personalizada</h3>
                         <p>
-                            Oferecendo cuidados personalizados com uma equipe experiente para garantir o bem-estar dos idosos sob seus cuidados.
+                        Nossa plataforma permite que você personalize o plano de cuidados de acordo com as necessidades exclusivas do idoso. Desde a programação de medicamentos até o acompanhamento da alimentação, você está no controle.
                         </p>
                     </div>
                     <div className={styles.card}>
                         <img src={vinte_quatro_hrs} alt='24horas' />
                         <h3 className={styles.titulo}>Disponibilidade 24 Horas</h3>
                         <p>
-                            Nossa equipe de consultores está disponível 24 horas por dia, 7 dias por semana, para responder a quaisquer perguntas ou preocupações que você possa ter.
+                        Sabemos que as preocupações podem surgir a qualquer momento. Nossa plataforma está disponível 24 horas por dia, 7 dias por semana, para ajudar a responder a todas as suas perguntas e lidar com emergências.
                         </p>
                     </div>
                     <div className={styles.card}>
                         <img src={caixa} alt='Caixa' />
-                        <h3 className={styles.titulo}>Servindo em vários países</h3>
+                        <h3 className={styles.titulo}>Contatos de Emergência</h3>
                         <p>
-                            Levando nossos serviços de cuidado a diversos países para garantir que idosos de todo o mundo recebam a atenção que merecem.
+                        Esteja preparado para qualquer situação, mantenha uma lista de contatos de emergência facilmente acessível para garantir a tranquilidade de todos. Você pode adicionar rapidamente números de telefone de médicos e familiares próximos.
                         </p>
                     </div>
                 </div>
@@ -128,7 +119,7 @@ function LandingPage() {
                         <h2>Cuidado Compassivo</h2>
                         <p>
                             Nossa missão é proporcionar cuidados que não apenas atendam às necessidades físicas, mas também nutram a alma.
-                            Cada sorriso compartilhado, cada história ouvida é parte do nosso compromisso.
+                            Cada sorriso compartilhado, cada história ouvida é parte do nosso compromisso. Seja você um cuidador de idosos experiente ou alguém que está começando agora, nossa plataforma está pronta para ajudá-lo a oferecer os melhores cuidados possíveis. Comece hoje mesmo e simplifique a gestão de cuidados de seus entes queridos.
                         </p>
                         <img src={user_happy} alt='User Happy' />
                         <p>
@@ -170,8 +161,8 @@ function LandingPage() {
             <section className={styles.newsletter}>
                 <div className={styles.container}>
                     <div className={styles.box_newsletter}>
-                        <h2>Escreva-se na nossa newletter</h2>
-                        <p>Esgrava-se pra receber conteúdos, novidades e dicas importantes.</p>
+                        <h2>Junte-se à nossa Comunidade de Cuidadores</h2>
+                        <p>Faça parte da nossa comunidade e receba dicas essenciais e notícias relevantes sobre o cuidado de idosos.</p>
                         <form>
                             <input type='email' placeholder='Digite o seu email' />
                             <button>Subescrever</button>
