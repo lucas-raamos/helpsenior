@@ -1,3 +1,10 @@
+:root {
+
+  --degrade-btn: linear-gradient(#1D6480, #164C61);
+
+
+}
+
 .btn {
     background-color: #222;
     color: #fff;
@@ -5,12 +12,17 @@
     text-decoration: none;
     transition: 0.5s;
     font-family: 'Roboto';
-
+   background-image: var(--degrade-btn);
+   border-radius: 5px;
+    
+  
   }
+
+  
   
   .btn:hover {
     /*color: #266218;*/
     color: #fff;
-    background: #266218;
-    box-shadow: 0 0 5px #266218, 0 0 25px #266218, 0 0 50px #266218, 0 0 200 #266218;
+    background: #164b60;
+  
   }

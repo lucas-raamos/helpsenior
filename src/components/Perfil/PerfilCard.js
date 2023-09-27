@@ -23,7 +23,7 @@ function PerfilCard({ id, name, date, peso, genero, handleRemove }) {
                 <span className={`${styles[genero.toLowerCase()]}`} /> {genero}
             </p>
             <div className={styles.perfil_card_actions}>
-                <Link to='/'>
+                <Link to={`/perfil/${id}`}>
                     <BsFillPersonFill /> Ficha
                     
                 </Link>

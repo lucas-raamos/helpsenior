@@ -1,8 +1,10 @@
+
 .navbar{
     display: flex;
     justify-content:  space-between;
-    background-color:  #5a9348;
+    background-color: #164b60;;
     padding: 0.5em;
+
     
 
 }
@@ -16,7 +18,8 @@
 }
 
 .item {
-    margin-right: 1em;
+    margin: 0 35px;
+    font-size: 15px;
     
 }
 
@@ -29,7 +32,7 @@
 }
 
 .item a:hover {
-    color: #266218;
+    color: #4fc0d0;
 }
 .logo_nav img{
     max-width:280px;
