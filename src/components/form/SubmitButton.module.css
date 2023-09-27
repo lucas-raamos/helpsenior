@@ -1,22 +1,31 @@
-.btn{
-  background-color: #222;
-  color: #fff;
-  padding: 0.7em 1.5em;
-  text-align: center;
-  text-decoration: none;
-  transition: .5s;
-  cursor: pointer;
-  border: 4px groove;
-  border-color: #266218;
-  font-size: 14px;
-  
+
+:root {
+
+  --degrade-btn: linear-gradient(#1D6480, #164C61);
+
 
 }
-.btn:hover{
-  color: #266218;
- 
+
+.btn {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 0.6em 2em;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-family: 'Roboto';
+  background-image: var(--degrade-btn);
+  border-radius: 5px;
+
+
 }
-.button{
-  text-align: center;
+
+
+
+.btn:hover {
+  /*color: #266218;*/
+  color: #fff;
+  background: #164b60;
 
 }
