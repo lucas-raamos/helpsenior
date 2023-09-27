@@ -1,39 +1,31 @@
-.form {
-    width: 100%;
-    margin: 2em 0;
-}
 
 :root {
 
     --degrade-btn: linear-gradient(#1D6480, #164C61);
-
-
-}
-
-.btn {
+  
+  
+  }
+  
+  .btn {
     background-color: #222;
     color: #fff;
-    padding: 0.7em 1.5em;
+    border: none;
+    padding: 0.6em 2em;
+    font-size: 16px;
     text-decoration: none;
     transition: 0.5s;
     font-family: 'Roboto';
     background-image: var(--degrade-btn);
     border-radius: 5px;
-    
-}
-
-
-
-.btn:hover {
+  
+  
+  }
+  
+  
+  
+  .btn:hover {
     /*color: #266218;*/
     color: #fff;
     background: #164b60;
-
-}
-
-.buttons {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 20px;
-}
+  
+  }

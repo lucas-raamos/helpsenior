@@ -32,7 +32,7 @@ function NewPerfil() {
       <div className={styles.newperfil_container}>
         <h1>Criar Perfil</h1>
         <p>Crie um perfil para depois adicionar um medicamento</p>
-        <PerfilForm handleSubmit={createPost} btnText='Criar Perfil' />
+        <PerfilForm handleSubmit={createPost} btnText='Criar' />
       </div>
   );
 }
