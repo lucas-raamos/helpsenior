@@ -8,7 +8,7 @@ import Perfis from './components/pages/Perfis';
 import MainLayout from './components/layout/MainLayout';
 import LandingPage from './components/pages/LandingPage';
 import Perfil from './components/pages/Perfil';
-
+import Login from './components/pages/Login';
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<LandingPage />}  />
         {/* Renderizar as páginas dentro do MainLayout */}
         <Route element={<MainLayout><Home /></MainLayout>} path="/home" />
+        <Route element={<Login />} path="/login" />
         <Route element={<MainLayout><Perfis /></MainLayout>} path="/perfis" />
         <Route element={<MainLayout><Company /></MainLayout>} path="/company" />
         <Route element={<MainLayout><Contact /></MainLayout>} path="/contact" />
