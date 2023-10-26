@@ -26,6 +26,12 @@ function NavBar(){
             <li className={styles.item}>
                 <Link to="/contact">Contato</Link>
             </li>
+            <li className={styles.item}>
+                <Link to="/contact">Cuidadores</Link>
+            </li>
+            <li className={styles.item}>
+                <Link to="/contact">Sair</Link>
+            </li>
           
         </ul>
 

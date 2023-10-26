@@ -13,8 +13,8 @@ function Footer() {
           <h3>Início</h3>
           <ul>
             <li>Home</li>
-            <li>Cursos</li>
-            <li>Downloads</li>
+            <li>Perfis</li>
+            <li>Profissionais</li>
           </ul>
         </div>
         <div className={styles.column}>

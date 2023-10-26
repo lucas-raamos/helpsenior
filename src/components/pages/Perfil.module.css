@@ -9,9 +9,9 @@
   }
   
   .perfil_details h1 {
-    background-color: #222;
-    color: white;
-    padding: 0.4em;
+    font-weight: bold;
+    color: black;
+   
   }
   
   .perfil_details span {
