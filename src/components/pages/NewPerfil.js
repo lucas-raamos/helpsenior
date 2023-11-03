@@ -9,7 +9,8 @@ function NewPerfil() {
   function createPost(perfil) {
     // initialize cost and services
     perfil.helpsenior = 0;
-    perfil.services = [];
+    perfil.medicamentos = [];
+    perfil.consultas = [];
 
     fetch('http://localhost:5000/perfis', {
       method: 'POST',
@@ -23,6 +24,8 @@ function NewPerfil() {
         console.log(data);
         //redirect
         navigate('/perfis',  { state: { message: 'Perfil criado com sucesso!' }} );
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
       })
       .catch((err) => console.log(err));
   }
@@ -33,6 +36,7 @@ function NewPerfil() {
         <h1>Criar Perfil</h1>
         <p>Crie um perfil para depois adicionar um medicamento</p>
         <PerfilForm handleSubmit={createPost} btnText='Criar' />
+        
       </div>
   );
 }

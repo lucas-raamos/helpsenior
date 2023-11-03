@@ -48,6 +48,8 @@ function Perfis() {
         .then(() => {
             setPerfis(perfis.filter((perfil) => perfil.id !== id))
             setPerfilMessage('Paciente removido com sucesso!')
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
         })
         .catch((err) => console.log(err))
     }

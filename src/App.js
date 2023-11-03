@@ -9,6 +9,7 @@ import MainLayout from './components/layout/MainLayout';
 import LandingPage from './components/pages/LandingPage';
 import Perfil from './components/pages/Perfil';
 import Login from './components/pages/Login';
+
 function App() {
   return (
     <Router>

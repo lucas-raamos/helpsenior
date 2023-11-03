@@ -10,6 +10,10 @@ function PerfilCard({ id, name, date, peso, genero, handleRemove }) {
         handleRemove(id)
     }
 
+    const scrollToTop = () => {
+        window.scrollTo(0, 0); // Rolando a página para o topo
+    }
+
     return (
         <div className={styles.perfil_card}>
             <h4>{name}</h4>
@@ -23,9 +27,8 @@ function PerfilCard({ id, name, date, peso, genero, handleRemove }) {
                 <span className={`${styles[genero.toLowerCase()]}`} /> {genero}
             </p>
             <div className={styles.perfil_card_actions}>
-                <Link to={`/perfil/${id}`}>
+                <Link to={`/perfil/${id}`} onClick={scrollToTop}>
                     <BsFillPersonFill /> Ficha
-                    
                 </Link>
                 <button onClick={remove}>
                     <BsFillTrashFill /> Excluir

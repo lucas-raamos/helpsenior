@@ -19,7 +19,7 @@
   }
   
   .details_container,
-  .service_form_container {
+  .medicamentos_form_container {
     border-bottom: 1px solid #7a7a7a;
     padding-bottom: 1.2em;
     margin-bottom: 1.2em;
@@ -44,6 +44,7 @@
     background-image: var(--degrade-btn);
     cursor: pointer;
     max-height: 40px;
+    width: 170px;
     border-radius: 5px;
   }
   
@@ -55,4 +56,12 @@
   
   .perfil_info {
     width: 100%;
+  }
+
+.title{
+    display: flex;
+    align-items: center;
+  }
+  .icon{
+    margin-right: 10px;
   }

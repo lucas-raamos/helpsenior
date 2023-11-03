@@ -30,7 +30,7 @@ function NavBar(){
                 <Link to="/contact">Cuidadores</Link>
             </li>
             <li className={styles.item}>
-                <Link to="/contact">Sair</Link>
+                <Link to="/login">Sair</Link>
             </li>
           
         </ul>
