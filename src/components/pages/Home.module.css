@@ -1,40 +1,35 @@
 
-.home_container{
-    width: 100%;
+
+main .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1em;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.main_text {
+    width: 50%;
+    color: black;
+    margin-left: 100px;
+}
+
+.main_text h1 {
+    font-size: 5rem;
+}
+
+.main_text div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
     
-
 }
-.home_container h1{
-    font-size: 3.5em;
-    margin-bottom: .5em;
-    font-family: Bebas Neue;
 
-
-}
-.home_container h1 span{
-    color: #164b60;
-    padding: 0 .2em;
-
-    font-family: Bebas Neue;
-
-   
-
-}
-.home_container p{
-    margin-bottom:  1.5em;
-    color: #7b7b7b;
-    font-family: 'Roboto';
-
-
-}
-.home_logo{
-    max-width: 400px;
-    max-height:400px;
+.main_img img {
+    max-width: 600px;
+    max-height: 600px;
     width: auto;
     height: auto;
+    border-radius: 8px;
+    margin-left:  10px;
+    
 }

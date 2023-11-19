@@ -81,6 +81,14 @@ function PerfilForm({ handleSubmit, btnText, perfilData }) {
         handleOnChange={handleGenero}
         value={perfil.genero ? perfil.genero.id : ''}
       />
+      <Input
+        type='text'
+        text='Contato de emergência'
+        name='cttemergencia'
+        placeholder='Insira um contato de emergência'
+        handleOnchange={handleChange}
+        value={perfil.cttemergencia ? perfil.cttemergencia : ''}
+      />
 
       <div className={styles.buttons}>
         <BackButton to='/home' />

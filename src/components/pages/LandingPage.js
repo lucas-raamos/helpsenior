@@ -49,7 +49,7 @@ function LandingPage() {
                             <h1>Cuidado Dedicado</h1>
                             <h2>Tradição e acolhimento</h2>
                             <div>
-                                <button className={styles.btn_gradiente}>Começar agora</button>
+                            <Link to="/login"><button className={styles.btn_gradiente}>Começar agora</button></Link>
                                 <img src={verificado} alt='Verificado' />
                             </div>
                         </div>

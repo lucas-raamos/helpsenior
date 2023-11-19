@@ -1,12 +1,12 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
 import Message from "../layout/Message"
 import Container from '../layout/Container'
 import Loading from "../layout/Loading"
-import LinkButton from '../layout/LinkButton'
 import PerfilCard from "../Perfil/PerfilCard"
 import styles from './Perfis.module.css'
-import { BsClipboardCheckFill } from 'react-icons/bs';
+import { BsClipboardCheckFill } from 'react-icons/bs'
+import LinkButton from "../layout/LinkButton"
 
 function Perfis() {
     const [perfis, setPerfis] = useState([])
@@ -14,9 +14,13 @@ function Perfis() {
     const [perfilMessage, setPerfilMessage] = useState('')
 
     const navigate = useNavigate()
+    const location = useLocation()
+
     let message = ''
     if (navigate.state) {
         message = navigate.state.message
+    } else if (location.state) {
+        message = location.state.message
     }
 
     useEffect(() => {
@@ -44,14 +48,19 @@ function Perfis() {
                 'Content-Type': 'application/json',
             },
         })
-        .then((resp) => resp.json())
-        .then(() => {
-            setPerfis(perfis.filter((perfil) => perfil.id !== id))
-            setPerfilMessage('Paciente removido com sucesso!')
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
+        .then((resp) => {
+            if (resp.ok) {
+                setPerfis(perfis.filter((perfil) => perfil.id !== id))
+                setPerfilMessage('Paciente removido com sucesso!')
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                setPerfilMessage('Falha ao remover o paciente.')
+            }
         })
-        .catch((err) => console.log(err))
+        .catch((err) => {
+            console.log(err)
+            setPerfilMessage('Falha ao remover o paciente.')
+        })
     }
         
     return (
@@ -76,6 +85,7 @@ function Perfis() {
                             date={perfil.date} 
                             peso={perfil.peso} 
                             genero={perfil.genero ? perfil.genero.name : 'Gênero Desconhecido'}
+                            cttemergencia={perfil.cttemergencia}
                             key={perfil.id}
                             handleRemove={removePerfil}  
                         />
