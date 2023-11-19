@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import PerfilForm from '../Perfil/PerfilForm';
 import styles from './NewPerfil.module.css';
 
+
 function NewPerfil() {
   const navigate = useNavigate();
 
@@ -11,6 +12,7 @@ function NewPerfil() {
     perfil.helpsenior = 0;
     perfil.medicamentos = [];
     perfil.consultas = [];
+    perfil.alimentos = [];
 
     fetch('http://localhost:5000/perfis', {
       method: 'POST',

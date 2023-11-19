@@ -1,67 +1,91 @@
 .perfil_details {
-    padding: 2em;
-  }
-  
-  .perfil_details h1,
-  .perfil_details h2,
-  .perfil_details p {
-    margin-bottom: 0.5em;
-  }
-  
-  .perfil_details h1 {
-    font-weight: bold;
-    color: black;
-   
-  }
-  
-  .perfil_details span {
-    font-weight: bold;
-  }
-  
-  .details_container,
-  .medicamentos_form_container {
-    border-bottom: 1px solid #7a7a7a;
-    padding-bottom: 1.2em;
-    margin-bottom: 1.2em;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  :root {
+  padding: 2em;
+}
 
-    --degrade-btn: linear-gradient(#1D6480, #164C61);
+.perfil_details h1,
+.perfil_details h2,
+.perfil_details p {
+  margin-bottom: 0.5em;
+}
+
+.perfil_details h1 {
+  font-weight: bold;
+  color: black;
+
+}
+
+.perfil_details span {
+  font-weight: bold;
+}
+
+.details_container,
+.medicamentos_form_container {
+  border-bottom: 1px solid #7a7a7a;
+  padding-bottom: 1.2em;
+  margin-bottom: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+:root {
+
+  --degrade-btn: linear-gradient(#1D6480, #164C61);
 
 
 }
-  .btn {
-    background-color: #222;
-    color: #fff;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    transition: 0.5s;
-    border: none;
-    font-family:'Roboto';
-    background-image: var(--degrade-btn);
-    cursor: pointer;
-    max-height: 40px;
-    width: 170px;
-    border-radius: 5px;
-  }
-  
-  .btn:hover {
-    color: #fff;
-    background: #164b60;
-    
-  }
-  
-  .perfil_info {
-    width: 100%;
-  }
 
-.title{
-    display: flex;
-    align-items: center;
-  }
-  .icon{
-    margin-right: 10px;
-  }
+.btn {
+  background-color: #222;
+  color: #fff;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: 0.5s;
+  border: none;
+  font-family: 'Roboto';
+  background-image: var(--degrade-btn);
+  cursor: pointer;
+  max-height: 40px;
+  width: 170px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #164b60;
+
+}
+
+.perfil_info {
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.btn_relatorio {
+  background-color: #222;
+  color: #fff;
+  padding: 1em 1em;
+  text-decoration: none;
+  transition: 0.5s;
+  border: none;
+  font-family: 'Roboto';
+  background-image: var(--degrade-btn);
+  cursor: pointer;
+  max-height: 40px;
+  width: 100px;
+  border-radius: 5px;
+
+}
+.btn_relatorio:hover {
+  color: #fff;
+  background: #164b60;
+
+}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './PerfilCard.module.css';
 import { BsFillTrashFill, BsFillPersonFill } from 'react-icons/bs';
 
-function PerfilCard({ id, name, date, peso, genero, handleRemove }) {
+function PerfilCard({ id, name, date, peso, genero, cttemergencia, handleRemove }) {
 
     const remove = (e) => {
         e.preventDefault()
@@ -25,6 +25,9 @@ function PerfilCard({ id, name, date, peso, genero, handleRemove }) {
             </p>
             <p className={styles.genero_text}>
                 <span className={`${styles[genero.toLowerCase()]}`} /> {genero}
+            </p>
+            <p>
+                <span>Contato de emergência:</span> {cttemergencia}
             </p>
             <div className={styles.perfil_card_actions}>
                 <Link to={`/perfil/${id}`} onClick={scrollToTop}>
