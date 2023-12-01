@@ -17,18 +17,20 @@ function PerfilCard({ id, name, date, peso, genero, cttemergencia, handleRemove 
     return (
         <div className={styles.perfil_card}>
             <h4>{name}</h4>
+            
+            <p>
+                <span>Peso:</span> {peso}
+            </p>
+            <p>
+                <span>Gênero: </span> {genero}
+            </p>
             <p>
                 <span>Data de nascimento: </span> {date}
             </p>
             <p>
-                <span>Peso:</span> {peso}
-            </p>
-            <p className={styles.genero_text}>
-                <span className={`${styles[genero.toLowerCase()]}`} /> {genero}
-            </p>
-            <p>
                 <span>Contato de emergência:</span> {cttemergencia}
             </p>
+            
             <div className={styles.perfil_card_actions}>
                 <Link to={`/perfil/${id}`} onClick={scrollToTop}>
                     <BsFillPersonFill /> Ficha

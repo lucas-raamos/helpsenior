@@ -7,6 +7,8 @@ const BackButton = () => {
 
   const handleBack = () => {
     navigate('/home'); // Navega de volta uma página
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
   };
 
   return (

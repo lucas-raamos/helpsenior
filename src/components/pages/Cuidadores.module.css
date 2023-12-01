@@ -1,0 +1,39 @@
+/* Estilizando o container principal */
+.filtro_container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilizando a caixa de busca */
+  .filtro_input {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* Estilizando os itens da lista */
+  .perfil_item {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-bottom: 40px;
+    list-style-type: none;
+    text-align: left;
+    
+    
+   
+  }
+  .imagem_perfil{
+    max-width: 100px;
+    min-width: 100px;
+  }
+
+  .pre-conteudo{
+    margin: 5px;
+    white-space: pre-wrap;
+  }
+
+  /* Cuidadores.module.css */
+

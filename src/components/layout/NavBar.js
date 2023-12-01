@@ -20,14 +20,11 @@ function NavBar(){
             <li className={styles.item}>
                 <Link to="/perfis">Perfis</Link>
             </li>
-            <li className={styles.item}> 
-                <Link to="/company">Empresa</Link>
-            </li>
             <li className={styles.item}>
                 <Link to="/contact">Contato</Link>
             </li>
             <li className={styles.item}>
-                <Link to="/contact">Cuidadores</Link>
+                <Link to="/cuidadores">Cuidadores</Link>
             </li>
             <li className={styles.item}>
                 <Link to="/login">Sair</Link>

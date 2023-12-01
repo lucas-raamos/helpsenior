@@ -81,10 +81,10 @@ function Perfis() {
                     perfis.map((perfil) => (
                         <PerfilCard 
                             id={perfil.id} 
-                            name={perfil.name} 
                             date={perfil.date} 
                             peso={perfil.peso} 
                             genero={perfil.genero ? perfil.genero.name : 'Gênero Desconhecido'}
+                            name={perfil.name} 
                             cttemergencia={perfil.cttemergencia}
                             key={perfil.id}
                             handleRemove={removePerfil}  

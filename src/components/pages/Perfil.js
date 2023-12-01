@@ -145,76 +145,72 @@ function Perfil() {
         perfilUpdated.medicamentos = medicamentosUpdated
         perfilUpdated.helpsenior = parseFloat(perfilUpdated.helpsenior) - parseFloat(helpsenior)
 
-        fetch(`http://localhost:5000/perfis/${perfilUpdated.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application.json'
-            },
-            body: JSON.stringify(perfilUpdated),
+        fetch(`http://localhost:5000/perfis/${perfil.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ medicamentos: medicamentosUpdated }),
+    })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setMedicamentos(medicamentosUpdated);
+            setMessage('Medicamento removido com sucesso!');
+            setType('success');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setPerfil(perfilUpdated)
-                setMedicamentos(medicamentosUpdated)
-                setMessage('Medicamento removido com sucesso!')
-                setType('success')
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            })
-            .catch((err) => console.log(err))
-    }
+        .catch((err) => console.log(err));
+}
 
-    function removeConsulta(id, helpsenior) {
-        const consultasUpdated = perfil.consultas.filter(
-            (consulta) => consulta.id !== id
-        )
+function removeConsulta(id, helpsenior) {
+    const consultasUpdated = consultas.filter(
+        (consulta) => consulta.id !== id
+    );
 
-        const perfilUpdated = perfil
-        perfilUpdated.consultas = consultasUpdated
-        perfilUpdated.helpsenior = parseFloat(perfilUpdated.helpsenior) - parseFloat(helpsenior)
+    const newHelpSenior = parseFloat(perfil.helpsenior) - parseFloat(helpsenior);
 
-        fetch(`http://localhost:5000/perfis/${perfilUpdated.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application.json'
-            },
-            body: JSON.stringify(perfilUpdated),
+    fetch(`http://localhost:5000/perfis/${perfil.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ helpsenior: newHelpSenior, consultas: consultasUpdated }),
+    })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setConsultas(consultasUpdated);
+            setPerfil({ ...perfil, helpsenior: newHelpSenior });
+            setMessage('Consulta removida com sucesso!');
+            setType('success');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setPerfil(perfilUpdated)
-                setConsultas(consultasUpdated)
-                setMessage('Consulta removida com sucesso!')
-                setType('success')
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            })
-            .catch((err) => console.log(err))
-    }
-    function removeAlimento(id, helpsenior) {
-        const alimentosUpdated = perfil.alimentos.filter(
-            (alimento) => alimento.id !== id
-        )
+        .catch((err) => console.log(err));
+}
 
-        const perfilUpdated = perfil
-        perfilUpdated.alimentos = alimentosUpdated
-        perfilUpdated.helpsenior = parseFloat(perfilUpdated.helpsenior) - parseFloat(helpsenior)
+function removeAlimento(id, helpsenior) {
+    const alimentosUpdated = alimentos.filter(
+        (alimento) => alimento.id !== id
+    );
 
-        fetch(`http://localhost:5000/perfis/${perfilUpdated.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application.json'
-            },
-            body: JSON.stringify(perfilUpdated),
+    const newHelpSenior = parseFloat(perfil.helpsenior) - parseFloat(helpsenior);
+
+    fetch(`http://localhost:5000/perfis/${perfil.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ helpsenior: newHelpSenior, alimentos: alimentosUpdated }),
+    })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setAlimentos(alimentosUpdated);
+            setPerfil({ ...perfil, helpsenior: newHelpSenior });
+            setMessage('Alimento removido com sucesso!');
+            setType('success');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setPerfil(perfilUpdated)
-                setAlimentos(alimentosUpdated)
-                setMessage('Alimento removido com sucesso!')
-                setType('success')
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            })
-            .catch((err) => console.log(err))
-    }
+        .catch((err) => console.log(err));
+}
 
     function togglePerfilForm() {
         setShowPerfilForm(!showPerfilForm)
@@ -236,33 +232,43 @@ function Perfil() {
         if (perfil && perfil.name) {
             const doc = new jsPDF();
             doc.internal.scaleFactor = 2;
-
-
+    
             // Adicione a fonte TrueType (TTF) que suporta caracteres especiais
             doc.addFileToVFS('font.ttf', 'path/to/font.ttf');
             doc.addFont('font.ttf', 'CustomFont', 'normal');
-
-            doc.setFont('helvetica');
-            doc.setFontSize(12);
-
+    
+            doc.setFont('CustomFont', 'bold'); // Define a fonte como negrito
+    
+            doc.setFontSize(18);
+    
             const imgData = card2;
             const imageWidth = doc.internal.pageSize.width - 10;
             const imageHeight = doc.internal.pageSize.height - 10;
-
+    
             const imageX = (doc.internal.pageSize.width - imageWidth) / 2;
             const imageY = (doc.internal.pageSize.height - imageHeight) / 2;
-
+    
             doc.addImage(imgData, 'JPEG', imageX, imageY, imageWidth, imageHeight);
-
-            doc.text(`Nome: ${perfil.name}`, imageX + 40, imageY + imageHeight / 2);
-            doc.text(`Data de Nascimento: ${perfil.date}`, imageX + 40, imageY + imageHeight / 2 + 10);
-            doc.text(`Peso: ${perfil.peso}`, imageX + 40, imageY + imageHeight / 2 + 20);
-            doc.text(`Gênero: ${perfil.genero.name}`, imageX + 40, imageY + imageHeight / 2 + 30);
-            doc.text(`Contato de emergência: ${perfil.cttemergencia}`, imageX + 40, imageY + imageHeight / 2 + 40);
-
+    
+            doc.text('Nome:', imageX + 40, imageY + imageHeight / 2 + 20);
+            doc.text('Peso:', imageX + 40, imageY + imageHeight / 2 + 30);
+            doc.text('Gênero:', imageX + 40, imageY + imageHeight / 2 + 40);
+            doc.text('Data de Nascimento:', imageX + 40, imageY + imageHeight / 2 + 50);
+            doc.text('Contato de emergência:', imageX + 40, imageY + imageHeight / 2 + 60);
+    
+            doc.setFont('CustomFont', 'normal'); // Retorna a fonte ao normal
+            
+    
+            doc.text(`${perfil.name}`, imageX + 60, imageY + imageHeight / 2 + 20);
+            doc.text(`${perfil.peso}`, imageX + 55, imageY + imageHeight / 2 + 30);
+            doc.text(`${perfil.genero.name}`, imageX + 65, imageY + imageHeight / 2 + 40);
+            doc.text(`${perfil.date}`, imageX + 98, imageY + imageHeight / 2 + 50);
+            doc.text(`${perfil.cttemergencia}`, imageX + 105, imageY + imageHeight / 2 + 60);
+    
             doc.save('relatorio.pdf');
         }
     };
+    
 
     return (
         <>
@@ -279,9 +285,7 @@ function Perfil() {
 
                             {!showPerfilForm ? (
                                 <div className={styles.perfil_info}>
-                                    <p>
-                                        <span>Data de nascimento:</span> {perfil.date}
-                                    </p>
+                                    
                                     <p>
                                         <span>Peso:</span> {perfil.peso}
                                     </p>
@@ -289,8 +293,12 @@ function Perfil() {
                                         <span>Gênero:</span> {perfil.genero.name}
                                     </p>
                                     <p>
+                                        <span>Data de nascimento:</span> {perfil.date}
+                                    </p>
+                                    <p>
                                         <span>Contato de emergência:</span> {perfil.cttemergencia}
                                     </p>
+
                                     <br />
                                     {/*} <Link to={`/perfil/${perfil.id}/card`}>
                                         <button className={styles.btn_relatorio}>Card</button>
@@ -422,7 +430,7 @@ function Perfil() {
                                     />
                                 ))
                             }
-                            {alimentos.length === 0 && <p>Não há consultas cadastradas</p>}
+                            {alimentos.length === 0 && <p>Não há refeições cadastradas</p>}
                         </Container>
                     </Container>
                 </div>
