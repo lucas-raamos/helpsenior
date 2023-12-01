@@ -3,7 +3,6 @@ import styles from './Registration.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
 const Registration = () => {
     const [formData, setFormData] = useState({
         fname: '',
@@ -12,56 +11,30 @@ const Registration = () => {
         password: '',
         cpassword: ''
     });
-    const [errors, setErrors] = useState({});
     const [valid, setValid] = useState(true);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let isvalid = true;
-        let validationErrors = {};
+        const isFormValid = validateForm();
+        setValid(isFormValid);
 
-        if (formData.fname === "" || formData.fname === null) {
-            isvalid = false;
-            validationErrors.fname = "Nome obrigatório";
-        }
-        if (formData.lname === "" || formData.lname === null) {
-            isvalid = false;
-            validationErrors.lname = "Sobrenome obrigatório";
-        }
-        if (formData.email === "" || formData.email === null) {
-            isvalid = false;
-            validationErrors.email = "Email obrigatório";
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            isvalid = false;
-            validationErrors.email = "Email não é válido";
-        }
-
-        if (formData.password === "" || formData.password === null) {
-            isvalid = false;
-            validationErrors.password = "Senha obrigatória";
-        } else if (formData.password.length < 6) {
-            isvalid = false;
-            validationErrors.password = "A senha deve ter pelo menos 6 caracteres";
-        }
-
-        if (formData.cpassword !== formData.password) {
-            isvalid = false;
-            validationErrors.cpassword = "As senhas não coincidem";
-        }
-
-        setErrors(validationErrors);
-        setValid(isvalid);
-
-        if (Object.keys(validationErrors).length === 0) {
+        if (isFormValid) {
             axios.post('http://localhost:5000/users', formData)
-            .then(result => {
-                alert('Registrado com sucesso')
-                navigate('/login')
-            })
-            .catch(err => console.log(err))
-           
+                .then(result => {
+                    alert('Registrado com sucesso');
+                    navigate('/login');
+                })
+                .catch(err => console.log(err));
         }
+    };
+
+    const validateForm = () => {
+        const { fname, lname, email, password, cpassword } = formData;
+        if (!fname || !lname || !email || !password || !cpassword) {
+            return false; // Retorna falso se algum campo estiver vazio
+        }
+        return true;
     };
 
     return (
@@ -73,13 +46,9 @@ const Registration = () => {
                 <div className={styles['login-form']}>
                     <h2>Cadastre-se</h2>
                     {!valid && (
-                 <span className={styles['text-danger']}>
-                 {errors.fname && <p className={styles['registration-error']}>{errors.fname}</p>}
-                 {errors.lname && <p className={styles['registration-error']}>{errors.lname}</p>}
-                 {errors.email && <p className={styles['registration-error']}>{errors.email}</p>}
-                 {errors.password && <p className={styles['registration-error']}>{errors.password}</p>}
-                 {errors.cpassword && <p className={styles['registration-error']}>{errors.cpassword}</p>}
-             </span>
+                        <span className={styles['text-danger']}>
+                            <p className={styles['registration-error']}>Preencha todos os campos</p>
+                        </span>
                     )}
                     <form onSubmit={handleSubmit}>
                         <div>
@@ -130,7 +99,7 @@ const Registration = () => {
                         <button type="submit">Cadastrar agora</button>
                     </form>
                     <p>
-                        <Link to='/login'> Se já tem uma conta? Faça login </Link>
+                        <Link to='/login'>Se já tem uma conta? Faça login</Link>
                     </p>
                 </div>
             </div>

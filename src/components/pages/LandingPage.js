@@ -31,7 +31,7 @@ function LandingPage() {
                             </div>
                             <ul className={styles.ul}>
                                 <li>
-                                    <Link to="/login">login</Link>
+                                    <Link to="/login">Login</Link>
                                 </li>
                                 <li>
                                     <Link to="/register"><button className={styles.btn_gradiente}>Cadastre-se</button></Link>

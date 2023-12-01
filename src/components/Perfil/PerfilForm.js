@@ -85,7 +85,7 @@ function PerfilForm({ handleSubmit, btnText, perfilData }) {
         type='text'
         text='Contato de emergência'
         name='cttemergencia'
-        placeholder='Insira um contato de emergência'
+        placeholder='(XX) XXXXX XXXX'
         handleOnchange={handleChange}
         value={perfil.cttemergencia ? perfil.cttemergencia : ''}
       />
